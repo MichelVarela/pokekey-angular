@@ -1,1 +1,9 @@
-<main class="container"></main>
+<main class="container">
+    <h1>Welcome to Pokekey</h1>
+    <div class="content-pokemon">
+        <app-card [pokemons]="pokes" *ngFor="let pokes of pokemons"></app-card>
+    </div>
+    <ul>
+        <li *ngFor="let pokes of pokemons">{{ pokes.name }}</li>
+    </ul>
+</main>

@@ -1,0 +1,254 @@
+@use "../../../scss/vars.scss" as v;
+
+.cart-pokemon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    border: 3px solid v.$grass;
+    border-radius: v.$radius;
+    overflow: hidden;
+
+    h3 {
+        align-self: flex-end;
+        margin: 10px 20px 0 0;
+        font-size: 1.8rem;
+        font-weight: 400;
+        color: v.$grass;
+    }
+
+    img {
+        width: 80%;
+    }
+
+    .content-name {
+        width: 100%;
+        height: 70px;
+        background: v.$grass;
+
+        h4 {
+            font-size: 1.8rem;
+            font-weight: 400;
+            text-align: center;
+            line-height: 70px;
+            color: v.$white;
+            text-transform: capitalize;
+        }
+    }
+}
+
+.cart-pokemon.bug {
+    border-color: v.$bug;
+
+    h3 {
+        color: v.$bug;
+    }
+
+    .content-name {
+        background: v.$bug;
+    }
+}
+
+.cart-pokemon.dark {
+    border-color: v.$dark;
+
+    h3 {
+        color: v.$dark;
+    }
+
+    .content-name {
+        background: v.$dark;
+    }
+}
+
+.cart-pokemon.dragon {
+    border-color: v.$dragon;
+
+    h3 {
+        color: v.$dragon;
+    }
+
+    .content-name {
+        background: v.$dragon;
+    }
+}
+
+.cart-pokemon.electric {
+    border-color: v.$electric;
+
+    h3 {
+        color: v.$electric;
+    }
+
+    .content-name {
+        background: v.$electric;
+    }
+}
+
+.cart-pokemon.fairy {
+    border-color: v.$fairy;
+
+    h3 {
+        color: v.$fairy;
+    }
+
+    .content-name {
+        background: v.$fairy;
+    }
+}
+
+.cart-pokemon.fighting {
+    border-color: v.$fighting;
+
+    h3 {
+        color: v.$fighting;
+    }
+
+    .content-name {
+        background: v.$fighting;
+    }
+}
+
+.cart-pokemon.fire {
+    border-color: v.$fire;
+
+    h3 {
+        color: v.$fire;
+    }
+
+    .content-name {
+        background: v.$fire;
+    }
+}
+
+.cart-pokemon.flying {
+    border-color: v.$flying;
+
+    h3 {
+        color: v.$flying;
+    }
+
+    .content-name {
+        background: v.$flying;
+    }
+}
+
+.cart-pokemon.ghost {
+    border-color: v.$ghost;
+
+    h3 {
+        color: v.$ghost;
+    }
+
+    .content-name {
+        background: v.$ghost;
+    }
+}
+
+.cart-pokemon.grass {
+    border-color: v.$grass;
+
+    h3 {
+        color: v.$grass;
+    }
+
+    .content-name {
+        background: v.$grass;
+    }
+}
+
+.cart-pokemon.ground {
+    border-color: v.$ground;
+
+    h3 {
+        color: v.$ground;
+    }
+
+    .content-name {
+        background: v.$ground;
+    }
+}
+
+.cart-pokemon.ice {
+    border-color: v.$ice;
+
+    h3 {
+        color: v.$ice;
+    }
+
+    .content-name {
+        background: v.$ice;
+    }
+}
+
+.cart-pokemon.normal {
+    border-color: v.$normal;
+
+    h3 {
+        color: v.$normal;
+    }
+
+    .content-name {
+        background: v.$normal;
+    }
+}
+
+.cart-pokemon.poison {
+    border-color: v.$poison;
+
+    h3 {
+        color: v.$poison;
+    }
+
+    .content-name {
+        background: v.$poison;
+    }
+}
+
+.cart-pokemon.psychic {
+    border-color: v.$psychic;
+
+    h3 {
+        color: v.$psychic;
+    }
+
+    .content-name {
+        background: v.$psychic;
+    }
+}
+
+.cart-pokemon.rock {
+    border-color: v.$rock;
+
+    h3 {
+        color: v.$rock;
+    }
+
+    .content-name {
+        background: v.$rock;
+    }
+}
+
+.cart-pokemon.steel {
+    border-color: v.$steel;
+
+    h3 {
+        color: v.$steel;
+    }
+
+    .content-name {
+        background: v.$steel;
+    }
+}
+
+.cart-pokemon.water {
+    border-color: v.$water;
+
+    h3 {
+        color: v.$water;
+    }
+
+    .content-name {
+        background: v.$water;
+    }
+}

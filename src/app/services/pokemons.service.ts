@@ -11,11 +11,11 @@ export class PokemonsService {
 
   constructor(private http: HttpClient) {}
 
-  getRandom(id: any) {
+  getRandom() {
 
-    return this.http.get(`${this.url}${id}`)
+    const pokemons: any[] = [];
 
-    /* this.http.get(this.url).subscribe((data: any) => {
+    this.http.get(this.url).subscribe((data: any) => {
 
       // obetenemos ocho números aleatorios para hacer la peticion 
       const nums: any = [];
@@ -24,11 +24,18 @@ export class PokemonsService {
         nums.push(num());
       }
       
+      // realizamos las peticiones de pokemon aleatorias
       for (let i = 0; i < nums.length; i++) {
-        this.http.get(`${this.url}${nums[i]}`).subscribe((data: any) => console.log(data))
+        this.http.get(this.url + nums[i]).subscribe((data: any) => {
+          // realizamos la peticion a la url base con los datos del pokemon
+          this.http.get(data.varieties[0].pokemon.url).subscribe(data => pokemons.push(data));
+        })
       } 
       
-    }) */
+    })
+
+    return pokemons;
+
   }
 
 }
