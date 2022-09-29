@@ -1,7 +1,18 @@
 <main class="container">
     <h1>Welcome to Pokekey</h1>
     <div class="content-pokemon">
-        <app-card [pokemons]="pokes" *ngFor="let pokes of pokemons"></app-card>
+        <div *ngFor="let pokes of pokemons">
+            <a routerLink="/detail/{{ pokes.id }}">
+                <div class="cart-pokemon {{ pokes.types[0].type.name }}" >
+                    <h3>#{{ pokes.order }}</h3>
+                    <img src="{{ pokes.sprites.other['official-artwork'].front_default }}" alt="{{ pokes.name }}" />
+                    <div class="content-name">
+                        <h4>{{ pokes.name }}</h4>
+                    </div>
+                </div>
+            </a>
+        </div>
+                
     </div>
     <ul>
         <li *ngFor="let pokes of pokemons">{{ pokes.name }}</li>

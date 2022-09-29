@@ -1,0 +1,12 @@
+<div>
+    <h2>Related</h2>
+    <a routerLink="/detail/{{ pokemons.id }}">
+        <div class="cart-pokemon {{ pokemons.types[0].type.name }}" >
+            <h3>#{{ pokemons.order }}</h3>
+            <img src="{{ pokemons.sprites.other['official-artwork'].front_default }}" alt="{{ pokemons.name }}" />
+            <div class="content-name">
+                <h4>{{ pokemons.name }}</h4>
+            </div>
+        </div>
+    </a>
+</div>

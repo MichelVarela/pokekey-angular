@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from "@angular/common/http";
 import { PokemonsService } from 'src/app/services/pokemons.service';
 
 @Component({
@@ -9,14 +8,13 @@ import { PokemonsService } from 'src/app/services/pokemons.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private pokemonsService: PokemonsService, private http: HttpClient) {}
+  constructor(private pokemonsService: PokemonsService) {}
 
-  url: string = 'https://pokeapi.co/api/v2/pokemon-species/';
   pokemons: any;
 
   ngOnInit(): void {
 
-    this.pokemons = this.pokemonsService.getRandom();
+    this.pokemons = this.pokemonsService.getRandom(8);
 
     //console.log(this.pokemons)
   }

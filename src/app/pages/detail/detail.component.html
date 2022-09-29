@@ -1,0 +1,61 @@
+<div>
+    <div class="detail-pokemon {{ pokemon[0].typeBase }}">
+        <img src="../../../assets/Pokeball.svg" alt="background" class="background-ball"/>
+        <div class="header">
+            <div class="back">
+                <a (click)="goBack()"><mat-icon style="color:#ffffff">west</mat-icon></a>
+                <div>
+                    <h3>{{ pokemon[0].name }}</h3>
+                </div>
+            </div>
+            <h4>#{{ pokemon[0].order }}</h4>
+        </div>
+        <figure>
+            <img src="{{ pokemon[0].sprite }}" alt="" />
+            <div class="types">
+                <figcaption class="{{ pokemon[0].typeBase }}">{{ pokemon[0].typeBase }}</figcaption>
+                <figcaption class="{{ pokemon[0].typeSec }}" *ngIf="pokemon[0].typeSec">{{ pokemon[0].typeSec }}</figcaption>
+            </div>
+        </figure>
+        <div class="detail">
+            <h4>about</h4>
+    
+            <section>
+                <article class="weight"> <mat-icon>line_weight</mat-icon> {{ (pokemon[0].weight * 0.1).toFixed(1) }} kg</article>
+                <article class="height"> <mat-icon>height</mat-icon> {{ (pokemon[0].height * 0.1).toFixed(1) }} m</article>
+                <article class="moves">
+                    <ul>
+                        <li>{{ pokemon[0].moveBase }}</li>
+                        <li *ngIf="pokemon[0].moveSec">{{ pokemon[0].moveSec }}</li>
+                    </ul>
+                </article>
+            </section>
+    
+            <span>{{ pokemon[0].description }}</span>
+    
+            <h4>base stats</h4>
+    
+            <div class="stats">
+                <ul class='types'>
+                    <li>hp</li>
+                    <li>atk</li>
+                    <li>def</li>
+                    <li>satk</li>
+                    <li>sdef</li>
+                    <li>spd</li>
+                </ul>
+                <ul class='values'>
+                    <li [ngStyle]="{ 'width.px': pokemon[0].hp, 'max-width.px': 200 }"></li>
+                    <li [ngStyle]="{ 'width.px': pokemon[0].attack, 'max-width.px': 200 }"></li>
+                    <li [ngStyle]="{ 'width.px': pokemon[0].defense, 'max-width.px': 200 }"></li>
+                    <li [ngStyle]="{ 'width.px': pokemon[0].special_attack, 'max-width.px': 200 }"></li>
+                    <li [ngStyle]="{ 'width.px': pokemon[0].special_defense, 'max-width.px': 200 }"></li>
+                    <li [ngStyle]="{ 'width.px': pokemon[0].speed, 'max-width.px': 200 }"></li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+    
+    <app-related></app-related>
+</div>
